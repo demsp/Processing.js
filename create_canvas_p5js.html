@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+</head>
+<body>
+  <div id='container'></div>
+  <script>
+  var sketch = function(p) {
+    p.setup = function(){
+      p.createCanvas(200, 200);
+      p.background(50);
+    }
+  };
+  new p5(sketch, 'container');
+  </script>
+</body>
+</html>
