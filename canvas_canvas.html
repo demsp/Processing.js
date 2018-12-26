@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+</head>
+<body>
+  <div id='container'></div>
+  <script>
+  //var sketch = function(p) {
+   // p.setup = function(){
+     // p.createCanvas(200, 200);
+      //p.background(50);
+    //}
+  //};
+  //new p5(sketch, 'container');
+
+var sketch = function( s ) {
+  s.setup = function() {
+    s.createCanvas(640, 480);
+  };
+  s.draw = function() {
+    if (s.mouseIsPressed) {
+      s.fill(0);
+    } else {
+      s.fill(255);
+    };
+    s.ellipse(s.mouseX, s.mouseY, 80, 80);
+  };
+};
+var myp5 = new p5(sketch);
+  </script>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillRect(20, 20, 150, 100);
+</script>
+</body>
+</html>
